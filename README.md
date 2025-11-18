@@ -1,5 +1,7 @@
 # Métodos de Ordenación en Java (Inserción, Selección y Burbuja)
 
+---
+
 ## Descripción del Proyecto
 
 Este proyecto implementa tres algoritmos fundamentales de ordenación en Java: **Inserción (Insertion Sort)**, **Selección (Selection Sort)** y **Burbuja (Bubble Sort)**. 
@@ -18,7 +20,8 @@ El proyecto proporciona herramientas interactivas para:
 ### Características Principales
 
 #### Algoritmos In-Place
-Los tres algoritmos modifican el arreglo original sin utilizar estructuras de datos adicionales. El espacio auxiliar utilizado es **O(1)** en todos los casos.
+- Los tres algoritmos modifican el arreglo original sin utilizar estructuras de datos adicionales. 
+- El espacio auxiliar utilizado es **O(1)** en todos los casos.
 
 #### Métodos `sort(int[] a, boolean trace)`
 Todos los algoritmos implementan dos versiones del método sort:
@@ -27,13 +30,13 @@ Todos los algoritmos implementan dos versiones del método sort:
 - sort(int[] array, boolean trace): Versión con opción de mostrar trazado paso a paso
 
 #### Corte Temprano en BubbleSort
-El algoritmo de burbuja incluye un mecanismo de optimización que detiene el proceso si en una pasada no hay intercambios, indicando que el arreglo ya está ordenado. Esto reduce significativamente el tiempo de ejecución en arreglos parcialmente ordenados o ya ordenados.
+- El algoritmo de burbuja incluye un mecanismo de optimización que detiene el proceso si en una pasada no hay intercambios, indicando que el arreglo ya está ordenado. Esto reduce significativamente el tiempo de ejecución en arreglos parcialmente ordenados o ya ordenados.
 
 #### Contabilización de Intercambios en SelectionSort
-Se registra el número total de intercambios realizados durante la ejecución del algoritmo, permitiendo análisis detallado del comportamiento.
+- Se registra el número total de intercambios realizados durante la ejecución del algoritmo, permitiendo análisis detallado del comportamiento.
 
 #### Movimiento por Iteración en InsertionSort
-Se contabilizan tanto los movimientos de elementos como el número de iteraciones realizadas, proporcionando una visión detallada del proceso de ordenación.
+- Se contabilizan tanto los movimientos de elementos como el número de iteraciones realizadas, proporcionando una visión detallada del proceso de ordenación.
 
 ---
 
@@ -50,7 +53,7 @@ El proyecto ha sido probado exhaustivamente con los siguientes casos especiales:
 
 ---
 
-## 🚀 Cómo Ejecutar el Programa
+## Cómo Ejecutar el Programa
 
 ### Desde Consola / Terminal
 
