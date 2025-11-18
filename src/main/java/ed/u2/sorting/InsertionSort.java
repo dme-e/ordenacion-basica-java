@@ -26,15 +26,14 @@ public final class InsertionSort {
             iterations++;
 
             if (layaout)
-                SortingUtils.printArray(array);
-        }
+                SortingUtils.print(array);
 
+
+        }
         if (layaout) {
             System.out.println("--------------------------------------");
             System.out.println("Total de movimientos realizados: " + counter);
             System.out.println("Total de iteraciones realizadas: " + iterations);
         }
-
     }
-
 }

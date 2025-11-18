@@ -5,96 +5,75 @@ import java.util.Scanner;
 
 public class SortingUtils {
 
-    public static void printArray(int[] array) {
+    public static void print(int[] a) {
 
-        for (int size : array) {
-            System.out.print(size + " ");
+        for (int n : a) {
+            System.out.print(n + " ");
         }
 
         System.out.println();
     }
 
-    public static int[] fillArrayManual(int size, Scanner scanner) {
+    public static int[] fillArrayManual(int n, Scanner sc) {
 
-        int[] array = new int[size];
-        System.out.println("--------------------------------------");
-        System.out.println("Ingrese " + size + " números:");
+        int[] a = new int[n];
+        System.out.println("\n--------------------------------------");
+        System.out.println("Ingrese " + n + " números:");
         System.out.println("--------------------------------------");
 
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < n; i++) {
 
             while (true) {
                 System.out.print("Ingrese el número " + (i + 1) + ": ");
-
-                if (scanner.hasNextInt()) {
-                    array[i] = scanner.nextInt();
+                if (sc.hasNextInt()) {
+                    a[i] = sc.nextInt();
                     break;
                 } else {
                     System.out.println("--------------------------------------");
-                    System.out.println("              VALOR INVÁLIDO          ");
-                    System.out.println("--------------------------------------");
+                    System.out.println("          VALOR INVALIDO          ");
                     System.out.println("Por favor ingrese un número.");
                     System.out.println("--------------------------------------");
-                    scanner.next();
+                    sc.next();
                 }
-
             }
-
         }
-
-        return array;
+        return a;
     }
 
-    public static int[] fillArrayAuto(int size) {
-        int[] array = new int[size];
+    public static int[] fillArrayAuto(int n) {
+        int[] a = new int[n];
         Random random = new Random();
+
         System.out.println("\n--------------------------------------");
         System.out.println("Llenando automáticamente el arreglo...");
         System.out.println("--------------------------------------");
 
-        for (int i = 0; i < size; i++) {
-            array[i] = random.nextInt(100); // valores 0 a 99
+        for (int i = 0; i < n; i++) {
+            a[i] = random.nextInt(100); // valores 0 a 99
         }
 
-        return array;
+        return a;
     }
 
-    public static int giveSize(Scanner scanner, int maxSize) {
+    public static int giveSize(Scanner scanner) {
         int size;
         System.out.println("--------------------------------------");
-        System.out.print("Ingrese el tamaño del arreglo (máximo " + maxSize + "): ");
+        System.out.print("Ingrese el tamaño del arreglo: ");
 
         while (true) {
-
             if (scanner.hasNextInt()) {
                 size = scanner.nextInt();
+                if (size > 0) return size;
 
-                if (size > 0 && size <= maxSize) {
-                    return size;
-                } else if (size > maxSize) {
-                    System.out.println("--------------------------------------");
-                    System.out.println("           OPCIÓN INVÁLIDA            ");
-                    System.out.println("--------------------------------------");
-                    System.out.println("El tamaño no puede exceder " + maxSize + " elementos.");
-                } else {
-                    System.out.println("--------------------------------------");
-                    System.out.println("           OPCIÓN INVÁLIDA            ");
-                    System.out.println("--------------------------------------");
-                    System.out.println("El tamaño debe ser mayor a 0.");
-                }
-
+                System.out.println("El tamaño debe ser mayor a 0.");
             } else {
-                System.out.println("--------------------------------------");
-                System.out.println("           OPCIÓN INVÁLIDA            ");
-                System.out.println("--------------------------------------");
-                System.out.println("Por favor ingrese un número entero.");
+                System.out.println("Entrada inválida. Por favor ingrese un número entero.");
                 scanner.next();
             }
-
-            System.out.println("--------------------------------------");
             System.out.print("Ingrese un número válido: ");
         }
-
     }
+
+
 
 }

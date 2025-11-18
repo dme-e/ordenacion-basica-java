@@ -23,29 +23,22 @@ public final class BubbleSort {
                     counter++;
 
                     if (layaout) {
-                        SortingUtils.printArray(array);
+                        SortingUtils.print(array);
                     }
-
                 }
-
             }
 
             if (!swapped) {
-
                 if (layaout && counter==0) {
                     System.out.println("No hubo intercambios");
                 }
-
                 break;
             }
-
         }
 
         if (layaout) {
             System.out.println("--------------------------------------");
             System.out.println("Total de intercambios: " + counter);
         }
-
     }
-
 }

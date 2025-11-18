@@ -6,6 +6,7 @@ public final class SelectionSort {
         sort(array, false);
     }
 
+
     public static void sort(int[] array, boolean layaout) {
         int intercambios = 0;
 
@@ -14,11 +15,9 @@ public final class SelectionSort {
             boolean cambio = false;
 
             for (int j = i + 1; j < array.length; j++) {
-
                 if (array[j] < array[min]) {
                     min = j;
                 }
-
             }
 
             if (min != i) {
@@ -30,17 +29,16 @@ public final class SelectionSort {
             }
 
             if (layaout && cambio) {
-                SortingUtils.printArray(array);
+                SortingUtils.print(array);
             }
-
         }
 
         if (layaout) {
             System.out.println("--------------------------------------");
             System.out.println("Total de intercambios realizados: " + intercambios);
         }
-
     }
+
 
 }
 
